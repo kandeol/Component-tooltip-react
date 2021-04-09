@@ -1,9 +1,11 @@
 .tooltip {
     display: inline-block;
     position: relative;
-    &:hover .tooltip-content {
+    &:hover .tooltip-content-hover,
+    &:focus-within .tooltip-content-focus {
         visibility: visible;
         opacity: 1;
+
         &.position-bottom {
             transform: translate3d(0, 0px, 0);
         }
@@ -17,7 +19,9 @@
             transform: translate3d(0, 0px, 0);
         }
     }
-    .tooltip-content {
+
+    .tooltip-content-hover,
+    .tooltip-content-focus {
         display: flex;
         position: absolute;
         justify-content: center;

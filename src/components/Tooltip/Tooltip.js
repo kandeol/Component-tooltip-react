@@ -9,9 +9,17 @@ export const POSITION = {
     BOTTOM: "bottom",
 };
 
+export const TYPE = {
+    HOVER: "hover",
+    FOCUS: "focus",
+};
+
 const Tooltip = (props) => {
-    const { tooltipPosition, children, content } = props;
-    const classes = classNames("tooltip-content", {
+    const { tooltipPosition, type, children, content } = props;
+    const classes = classNames("", {
+        "tooltip-content-hover": type === TYPE.HOVER,
+        "tooltip-content-focus": type === TYPE.FOCUS,
+
         "position-right": tooltipPosition === POSITION.RIGHT,
         "position-left": tooltipPosition === POSITION.LEFT,
         "position-top": tooltipPosition === POSITION.TOP,
@@ -20,7 +28,7 @@ const Tooltip = (props) => {
 
     return (
         <div className="tooltip">
-            <div>{children}</div>
+            {children}
             <div className={classes}>{content}</div>
         </div>
     );
