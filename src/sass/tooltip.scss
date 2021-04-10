@@ -22,17 +22,16 @@
 
     .tooltip-content-hover,
     .tooltip-content-focus {
-        display: blocks;
         position: absolute;
-        justify-content: center;
-        align-items: center;
+        text-align: left;
         color: black !important;
-        font-size: 16px;
+        font-size: 14px;
         background-color: white;
         border-radius: 7px;
-        padding: 5px;
+        padding: 10px;
         width: auto;
         height: auto;
+        z-index: 100;
         white-space: nowrap;
         opacity: 0;
         visibility: hidden;
@@ -68,5 +67,55 @@
         transform: scale(1) translate3d(0, 0px, 0);
         opacity: 1;
         visibility: visible;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 500px;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 400px;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 200px;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 200px;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 150px;
+            white-space: pre-line;
+        }
     }
 }

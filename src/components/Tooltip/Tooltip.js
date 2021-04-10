@@ -1,6 +1,7 @@
+import classNames from "classnames";
+import PropTypes from "prop-types";
 import React from "react";
 import "../../sass/tooltip.scss";
-import classNames from "classnames";
 
 export const POSITION = {
     RIGHT: "right",
@@ -32,6 +33,16 @@ const Tooltip = (props) => {
             <div className={classes}>{content}</div>
         </div>
     );
+};
+
+Tooltip.defaultProps = {
+    direction: "top",
+    type: "hover",
+};
+
+Tooltip.propTypes = {
+    direction: PropTypes.string,
+    type: PropTypes.string,
 };
 
 export default Tooltip;
