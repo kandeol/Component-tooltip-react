@@ -7,16 +7,16 @@
         opacity: 1;
 
         &.position-bottom {
-            animation: popIn 1s 1s ease-in-out;
+            animation: popIn 0.5s 1s ease-in-out;
         }
         &.position-top {
-            animation: popIn 1s 1s ease-in-out;
+            animation: popIn 0.5s 1s ease-in-out;
         }
         &.position-left {
-            animation: popIn 1s 1s ease-in-out;
+            animation: popIn 0.5s 1s ease-in-out;
         }
         &.position-right {
-            animation: popIn 1s 1s ease-in-out;
+            animation: popIn 0.5s 1s ease-in-out;
         }
     }
 
@@ -60,12 +60,12 @@
 
 @keyframes popIn {
     0% {
-        transform: scale(0) translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
         opacity: 0;
         visibility: hidden;
     }
     100% {
-        transform: scale(1) translate3d(0, 0px, 0);
+        transform: translate3d(0, 0px, 0);
         opacity: 1;
         visibility: visible;
     }
