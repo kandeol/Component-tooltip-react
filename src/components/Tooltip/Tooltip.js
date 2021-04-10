@@ -15,15 +15,15 @@ export const TYPE = {
 };
 
 const Tooltip = (props) => {
-    const { tooltipPosition, type, children, content } = props;
+    const { direction, type, children, content } = props;
     const classes = classNames("", {
         "tooltip-content-hover": type === TYPE.HOVER,
         "tooltip-content-focus": type === TYPE.FOCUS,
 
-        "position-right": tooltipPosition === POSITION.RIGHT,
-        "position-left": tooltipPosition === POSITION.LEFT,
-        "position-top": tooltipPosition === POSITION.TOP,
-        "position-bottom": tooltipPosition === POSITION.BOTTOM,
+        "position-right": direction === POSITION.RIGHT,
+        "position-left": direction === POSITION.LEFT,
+        "position-top": direction === POSITION.TOP,
+        "position-bottom": direction === POSITION.BOTTOM,
     });
 
     return (

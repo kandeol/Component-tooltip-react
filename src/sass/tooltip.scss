@@ -7,58 +7,66 @@
         opacity: 1;
 
         &.position-bottom {
-            transform: translate3d(0, 0px, 0);
+            animation: popIn 1s ease-in-out;
         }
         &.position-top {
-            transform: translate3d(0, 0px, 0);
+            animation: popIn 1s ease-in-out;
         }
         &.position-left {
-            transform: translate3d(0, 0px, 0);
+            animation: popIn 1s ease-in-out;
         }
         &.position-right {
-            transform: translate3d(0, 0px, 0);
+            animation: popIn 1s ease-in-out;
         }
     }
 
     .tooltip-content-hover,
     .tooltip-content-focus {
-        display: flex;
+        display: blocks;
         position: absolute;
         justify-content: center;
         align-items: center;
         color: black !important;
         font-size: 16px;
+        background-color: white;
+        border-radius: 7px;
+        padding: 5px;
+        width: auto;
+        height: auto;
+        white-space: nowrap;
         opacity: 0;
         visibility: hidden;
-        background-color: white;
-        padding: 10px;
-
-        width: 200px;
-        height: auto;
-
-        border-radius: 5px;
-        transition: all 0.5s ease-out;
+        transition: opacity 0.75s ease-out, visibility 0.75s ease-out;
 
         &.position-top {
-            bottom: 40px;
-            transform: translate3d(0, -20px, 0);
+            bottom: 35px;
         }
 
         &.position-bottom {
-            top: 40px;
-            transform: translate3d(0, 20px, 0);
+            top: 35px;
         }
 
         &.position-left {
             top: -10px;
             left: 105px;
-            transform: translate3d(20px, 0, 0);
         }
 
         &.position-right {
             top: -10px;
             right: 105px;
-            transform: translate3d(-20px, 0, 0);
         }
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0) translate3d(0, -20px, 0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: scale(1) translate3d(0, 0px, 0);
+        opacity: 1;
+        visibility: visible;
     }
 }

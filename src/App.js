@@ -7,24 +7,22 @@ function App() {
             <div className="App-content">
                 <span>
                     Hover&nbsp;
-                    <strong>
-                        <Tooltip
-                            tooltipPosition="top"
-                            type="hover"
-                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                        >
-                            HERE
-                        </Tooltip>
-                    </strong>
+                    <Tooltip
+                        direction="top"
+                        type="hover"
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                    >
+                        <strong>HERE</strong>
+                    </Tooltip>
                     &nbsp;!
                 </span>
 
                 <form>
                     <span>Example with input :&nbsp;</span>
                     <Tooltip
-                        tooltipPosition="top"
+                        direction="top"
                         type="focus"
-                        content="Lorem ipsum dolor sit amet"
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, onsectetur adipiscing elit,"
                     >
                         <input type="text" placeholder="text input" />
                     </Tooltip>
