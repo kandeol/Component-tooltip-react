@@ -7,16 +7,16 @@
         opacity: 1;
 
         &.position-bottom {
-            animation: popIn 1s ease-in-out;
+            animation: popIn 1s 1s ease-in-out;
         }
         &.position-top {
-            animation: popIn 1s ease-in-out;
+            animation: popIn 1s 1s ease-in-out;
         }
         &.position-left {
-            animation: popIn 1s ease-in-out;
+            animation: popIn 1s 1s ease-in-out;
         }
         &.position-right {
-            animation: popIn 1s ease-in-out;
+            animation: popIn 1s 1s ease-in-out;
         }
     }
 
@@ -38,21 +38,22 @@
         transition: opacity 0.75s ease-out, visibility 0.75s ease-out;
 
         &.position-top {
-            bottom: 35px;
+            bottom: 100%;
+            margin-left: -50px;
         }
-
         &.position-bottom {
-            top: 35px;
+            top: 100%;
+            margin-left: -50px;
         }
 
         &.position-left {
-            top: -10px;
-            left: 105px;
+            top: 0px;
+            right: 110%;
         }
 
         &.position-right {
-            top: -10px;
-            right: 105px;
+            top: 0px;
+            left: 110%;
         }
     }
 }
@@ -74,7 +75,7 @@
     .tooltip {
         .tooltip-content-hover,
         .tooltip-content-focus {
-            width: 500px;
+            width: auto;
             white-space: pre-line;
         }
     }
@@ -84,7 +85,7 @@
     .tooltip {
         .tooltip-content-hover,
         .tooltip-content-focus {
-            width: 400px;
+            width: auto;
             white-space: pre-line;
         }
     }
