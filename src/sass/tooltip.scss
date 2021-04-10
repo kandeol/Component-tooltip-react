@@ -1,0 +1,122 @@
+.tooltip {
+    display: inline-block;
+    position: relative;
+    &:hover .tooltip-content-hover,
+    &:focus-within .tooltip-content-focus {
+        visibility: visible;
+        opacity: 1;
+
+        &.position-bottom {
+            animation: popIn 0.5s 1s ease-in-out;
+        }
+        &.position-top {
+            animation: popIn 0.5s 1s ease-in-out;
+        }
+        &.position-left {
+            animation: popIn 0.5s 1s ease-in-out;
+        }
+        &.position-right {
+            animation: popIn 0.5s 1s ease-in-out;
+        }
+    }
+
+    .tooltip-content-hover,
+    .tooltip-content-focus {
+        position: absolute;
+        text-align: left;
+        color: black !important;
+        font-size: 14px;
+        background-color: white;
+        border-radius: 7px;
+        padding: 10px;
+        width: auto;
+        height: auto;
+        z-index: 100;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.75s ease-out, visibility 0.75s ease-out;
+
+        &.position-top {
+            bottom: 100%;
+            margin-left: -50px;
+        }
+        &.position-bottom {
+            top: 100%;
+            margin-left: -50px;
+        }
+
+        &.position-left {
+            top: 0px;
+            right: 110%;
+        }
+
+        &.position-right {
+            top: 0px;
+            left: 110%;
+        }
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: translate3d(0, 0px, 0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: auto;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: auto;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 200px;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 200px;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 150px;
+            white-space: pre-line;
+        }
+    }
+}
