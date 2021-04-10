@@ -1,3 +1,48 @@
 .page-test {
     display: block;
+    margin: 0px auto;
+}
+
+[class^="section-"],
+[class*=" section-"] {
+    border: 4px solid white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 7px;
+
+    h3 {
+        font-style: italic;
+    }
+
+    input {
+        display: block;
+        // appearance: none;
+        outline: 0;
+        border: 1px solid white;
+        background-color: #2b579d;
+        width: 150px;
+
+        border-radius: 6px;
+        padding: 6px 15px;
+        margin: 0 auto 10px auto;
+        // display: block;
+        text-align: center;
+        font-size: 18px;
+
+        color: white;
+
+        transition-duration: 0.25s;
+        font-weight: 300;
+
+        &:hover {
+            background-color: #5981c1;
+        }
+
+        &:focus {
+            background-color: white;
+            width: 300px;
+
+            color: #285eb6;
+        }
+    }
 }

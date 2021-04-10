@@ -6,6 +6,7 @@ const PageTest = (params) => {
     return (
         <div className="page-test">
             <div className="section-hover">
+                <h3>Tooltip use with event Hover</h3>
                 <span>
                     Hover&nbsp;
                     <Tooltip
@@ -19,6 +20,7 @@ const PageTest = (params) => {
                 </span>
             </div>
             <div className="section-focus">
+                <h3>Tooltip use with event Focus</h3>
                 <span>Example with input :&nbsp;</span>
                 <Tooltip
                     direction="top"
