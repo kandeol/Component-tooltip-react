@@ -3,27 +3,28 @@
     position: relative;
     &:hover .tooltip-content-hover,
     &:focus-within .tooltip-content-focus {
-        visibility: visible;
         opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        transition: opacity 0.5s 1s ease-out, visibility 0.5s 1s ease-out,
+            transform 0.5s 1s ease-in-out, left 0s ease-in-out,
+            right 0s ease-in-out;
 
-        &.position-bottom {
-            animation: popIn 0.5s 1s ease-in-out;
-        }
-        &.position-top {
-            animation: popIn 0.5s 1s ease-in-out;
-        }
-        &.position-left {
-            animation: popIn 0.5s 1s ease-in-out;
-        }
+        &.position-top,
+        &.position-bottom,
         &.position-right {
-            animation: popIn 0.5s 1s ease-in-out;
+            left: 0;
+        }
+
+        &.position-left {
+            right: 0;
         }
     }
 
     .tooltip-content-hover,
     .tooltip-content-focus {
+        display: block;
         position: absolute;
-        text-align: left;
         color: black !important;
         font-size: 14px;
         background-color: white;
@@ -35,39 +36,31 @@
         white-space: nowrap;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.75s ease-out, visibility 0.75s ease-out;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out,
+            transform 0.5s ease-in-out, left 0s 1s ease-in-out,
+            right 0s 1s ease-in-out;
 
         &.position-top {
-            bottom: 100%;
+            bottom: 110%;
             margin-left: -50px;
+            left: -4000px;
         }
         &.position-bottom {
             top: 100%;
             margin-left: -50px;
+            left: -4000px;
         }
-
         &.position-left {
-            top: 0px;
-            right: 110%;
+            top: -10px;
+            margin-right: 110%;
+            right: -4000px;
         }
-
         &.position-right {
-            top: 0px;
-            left: 110%;
+            top: -10px;
+            margin-left: 110%;
+            left: -4000px;
         }
-    }
-}
-
-@keyframes popIn {
-    0% {
-        transform: translate3d(0, -20px, 0);
-        opacity: 0;
-        visibility: hidden;
-    }
-    100% {
-        transform: translate3d(0, 0px, 0);
-        opacity: 1;
-        visibility: visible;
     }
 }
 

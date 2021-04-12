@@ -1,20 +1,11 @@
 .App {
     font-family: "Work Sans", sans-serif;
-    font-size: 30px;
+    font-size: 16px;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
 
-    background: linear-gradient(
-        90deg,
-        rgba(8, 34, 76, 1) 0%,
-        rgba(26, 63, 122, 1) 35%,
-        rgba(48, 113, 218, 1) 100%
-    );
-
-    .App-content {
-        display: block;
-    }
+    background: rgb(8, 34, 76);
 }
