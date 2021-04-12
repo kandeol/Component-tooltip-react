@@ -1,6 +1,7 @@
 import React from "react";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import "../../sass/page_test.scss";
+import Cat from "../../components/Cat/Cat";
 
 const PageTest = (params) => {
     return (
@@ -30,7 +31,16 @@ const PageTest = (params) => {
                     <input type="text" placeholder="text input" />
                 </Tooltip>
             </div>
-            <div className="section-component"></div>
+            <div className="section-component">
+                <h3>Tooltip use with a content component</h3>
+                <span>
+                    Hover&nbsp;
+                    <Tooltip direction="top" type="hover" content={<Cat />}>
+                        <strong>HERE</strong>
+                    </Tooltip>
+                    &nbsp;!
+                </span>
+            </div>
         </div>
     );
 };
