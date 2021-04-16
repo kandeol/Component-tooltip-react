@@ -13,7 +13,7 @@ export const TYPE = {
     HOVER: "hover",
     FOCUS: "focus",
 };
-
+// le package classnames permet de rendre ce composant generique selon le scenario
 const Tooltip = (props) => {
     const { direction, type, children, content } = props;
     const classes = classNames("", {
@@ -26,6 +26,7 @@ const Tooltip = (props) => {
         "position-bottom": direction === POSITION.BOTTOM,
     });
 
+    //le content peut etre du text , JSX ou un component
     return (
         <div className="tooltip">
             {children}

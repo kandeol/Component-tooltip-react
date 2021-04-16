@@ -8,6 +8,7 @@ const PageTest = (params) => {
         <div className="page-test">
             <div className="section-hover">
                 <h3>Tooltip use with event Hover</h3>
+                <span>Example with text :&nbsp;</span>
                 <span>
                     Hover&nbsp;
                     <Tooltip
@@ -35,6 +36,7 @@ const PageTest = (params) => {
                 <h3>Tooltip use with a content component</h3>
                 <span>
                     Hover&nbsp;
+                    {/* tooltip receive a component */}
                     <Tooltip direction="top" type="hover" content={<Cat />}>
                         <strong>HERE</strong>
                     </Tooltip>
