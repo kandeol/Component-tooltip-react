@@ -20,7 +20,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">Test technique Unkle Frontend</h1>
+  <h1 align="center">Component tooltip ReactJS</h1>
   <p align="center">
     This project consists in creating a Tooltip
     <br />
@@ -54,7 +54,7 @@
 1. Clone or download/extract the project repository
 
     ```bash
-    git clone https://github.com/kandeol/test-technique-unkle-front-end.git
+    git clone https://github.com/kandeol/Component-tooltip-react.git
     ```
 
 2. Move branch
@@ -97,7 +97,7 @@
 
 ANDEOL Kévin - andeol.kevin@gmail.com
 
-Project Link: [https://github.com/kandeol/test-technique-unkle-front-end](https://github.com/kandeol/test-technique-unkle-front-end)
+Project Link: [https://github.com/kandeol/Component-tooltip-react.git](https://github.com/kandeol/Component-tooltip-react.git)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
