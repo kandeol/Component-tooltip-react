@@ -1,0 +1,116 @@
+.tooltip {
+    display: inline-block;
+    position: relative;
+    &:hover .tooltip-content-hover,
+    &:focus-within .tooltip-content-focus {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        transition: opacity 0.5s 1s ease-out, visibility 0.5s 1s ease-out,
+            transform 0.5s 1s ease-in-out, left 0s ease-in-out,
+            right 0s ease-in-out;
+
+        &.position-top,
+        &.position-bottom,
+        &.position-right {
+            left: 0;
+        }
+
+        &.position-left {
+            right: 0;
+        }
+    }
+
+    .tooltip-content-hover,
+    .tooltip-content-focus {
+        display: block;
+        position: absolute;
+        color: black !important;
+        font-size: 14px;
+        background-color: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 7px;
+        padding: 10px;
+        width: auto;
+        height: auto;
+        z-index: 100;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out,
+            transform 0.5s ease-in-out, left 0s 1s ease-in-out,
+            right 0s 1s ease-in-out;
+
+        &.position-top {
+            bottom: 110%;
+            margin-left: -50px;
+            left: -4000px;
+        }
+        &.position-bottom {
+            top: 100%;
+            margin-left: -50px;
+            left: -4000px;
+        }
+        &.position-left {
+            top: -10px;
+            margin-right: 110%;
+            right: -4000px;
+        }
+        &.position-right {
+            top: -10px;
+            margin-left: 110%;
+            left: -4000px;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: auto;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: auto;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 200px;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 200px;
+            white-space: pre-line;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .tooltip {
+        .tooltip-content-hover,
+        .tooltip-content-focus {
+            width: 150px;
+            white-space: pre-line;
+        }
+    }
+}
