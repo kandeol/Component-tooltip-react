@@ -57,25 +57,19 @@
     git clone https://github.com/kandeol/Component-tooltip-react.git
     ```
 
-2. Move branch
-
-    ```bash
-    git checkout develop
-    ```
-
-3. Install depedencies
+2. Install depedencies
 
     ```bash
     npm install
     ```
 
-4. Start
+3. Start
 
     ```bash
     npm start
     ```
 
-5. Here we go ! You can now test (http://localhost:3000) !
+4. Here we go ! You can now test (http://localhost:3000) !
 
 ## Component path : "./src/components/Tooltip/Tooltip.js"
 
